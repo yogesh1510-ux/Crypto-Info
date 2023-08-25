@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  .header{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .header button a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+  }
+
+  .header button a:last-child{
+    margin-right: 0;
+  }
+
+  .header button a:hover{
+    color: #ff9900;
+  }
+
+
+.cardlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+   
+  }
+  
+
+  .cardview {
+    width: calc(20% - 20px); 
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cardview:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cardview a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .cardview img {
+    max-width: 45%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .cardview h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .cardview p {
+    margin: 0;
+  }
+
+
+
+
+  .pagechange {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagechange button {
+    border: none;
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 8px 12px;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .pagechange button:hover {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .pagechange button.active {
+    background-color: #333;
+    color: #fff;
+  }
+
+
+  .coins-radio-buttons{
+    display: flex;
+    gap: 20px;
+    width: 60%;
+    margin: 10px  auto;
+
+  }
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .coins-radio-buttons,
+  .cardlist.container {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  
+  .cardview {
+    width: 70%;
+    
+  }
+
+  .coins-radio-buttons{
+    display: flex ;
+    flex-direction: row;
+    gap: 20px;
+    width: 60%;
+    margin: 10px  auto;
+  }
+
+  .coins-radio-but{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 60%;
+    margin: 10px  auto;
+  }
+
+  .cardview img {
+    width: 50%;
+    
+  }
+
+}
+
+
+
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+.loading-animation {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #3498db; 
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite; 
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+.coin-details-card-main{
+  display: flex;
+  
+}
+
+.coin-details-card-first {
+  margin: 10px;
+ 
+}
+
+.coin-details-card-first img {
+    width: 20%;
+}
+.text1 {
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    font-size: small;
+    align-self: center;
+    justify-content: center;
+    opacity: 0.7;
+}
+
+.text2{
+  font-size: medium;
+  font-weight: 600;
+ 
+}
+
+
+.badge{
+  border: 2px solid transparent;
+  color: wheat;
+  background-color: #333;
+  
+  display: inline-block;
+}
+
+
+.arrow-icon{
+  color: #00FF00;
+  font-size: 15px;
+}
+
+.arrow-icon2{
+  color: #FF0000 ;
+  font-size: 15px;
+}
+  
+.high-indication{
+  background-color: #a2d8a2;
+  color: #005700;
+} 
+
+.low-indication{
+  background-color: #f0b3b3;
+  color: #800000;
+}
+
+.range{
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+  align-items: center;
+  
+}
+
+
+
+.progress-bar-container {
+  flex: 1;
+  background-color: #ddd;
+  height: 10px;
+  border-radius: 5px;
+ 
+  
+  position: relative;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #007bff;
+  border-radius: 5px;
+  width: 100%; 
+  transition: width 0.3s ease-in-out;
+}
+
+.low-indication, .high-indication {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.item{
+  font-family: "Bebas Neue";
+  display: flex;
+  justify-content: space-between;
+  font-size: 20spx;
+}
+
+.container{
+  width: 60vw;
+  margin-top: 10px;
+}
+
+
+.okk {
+
+  font-size: 16px;
+  color: blue;
+}
+
+
+
+
+.chart{
+  height: 50vh;
+  width: 70vw;
+}
+
+.main-container{
+  display: flex ;
+    flex-direction: row;
+    gap: 20px;
+    width: 60%;
+    margin: 10px  auto;
+}
+
+.btns{
+  gap: 10px;
+  padding: 5px;
+  
+}
+
+@media (max-width:768px){
+  .button-container{
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+
+
+.container2{
+  width: 60vw;
+  margin-top: 10px;
+}
+
+
+.header{
+  background-color: #070114;
+  color: #fff;
+  padding: 20px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+

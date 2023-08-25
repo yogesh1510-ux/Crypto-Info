@@ -1,0 +1,18 @@
+.error-com{
+    height: 100vh;
+    width: 100vw;
+  }
+  
+
+.error-message {
+    color:  #FF0000;
+    background-color: #ffecec;
+    padding: 10px;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid   #e57373;
+    border-radius: 5px;
+  }
+
