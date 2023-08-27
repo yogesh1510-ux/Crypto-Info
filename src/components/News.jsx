@@ -27,9 +27,10 @@ const [page,setPage] = useState(1);
         try {
             const response = await axios.request(options);
            
+            const filteredData = response.data.filter(item => item.description !== "");
 
-            setNewsData(response.data);
-            
+            setNewsData(filteredData);
+           
             setLoading(false);
         } catch (error) {
             console.error(error);
